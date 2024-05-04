@@ -15,13 +15,13 @@ public class UserDetailsController {
     @Autowired
     UserDetailsRepo userDetailsRepo;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://abdur1r.github.io/training-ui/")
     @PostMapping("/save")
     private UserDetailsDTO postUserData(@RequestBody UserDetailsDTO userDetails){
         return userDetailsRepo.save(userDetails);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://abdur1r.github.io/training-ui/")
     @GetMapping("/getData/{userId}")
     private Optional<UserDetailsDTO> gerUserData(@PathVariable String userId){
         return userDetailsRepo.findById(userId);
