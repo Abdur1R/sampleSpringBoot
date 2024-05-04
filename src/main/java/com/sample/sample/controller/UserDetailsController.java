@@ -12,10 +12,14 @@ import java.util.Optional;
 public class UserDetailsController {
     @Autowired
     UserDetailsRepo userDetailsRepo;
+
+    @CrossOrigin(origins = "*")
     @PostMapping("/save")
     private UserDetailsDTO postUserData(@RequestBody UserDetailsDTO userDetails){
         return userDetailsRepo.save(userDetails);
     }
+
+    @CrossOrigin(origins = "*")
     @GetMapping("/getData/{userId}")
     private Optional<UserDetailsDTO> gerUserData(@PathVariable String userId){
         return userDetailsRepo.findById(userId);
