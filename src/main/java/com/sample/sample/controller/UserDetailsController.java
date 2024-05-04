@@ -9,21 +9,19 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.Optional;
 
-@Configuration
-@EnableWebMvc
 @RestController
 @RequestMapping("/userDetails")
 public class UserDetailsController {
     @Autowired
     UserDetailsRepo userDetailsRepo;
 
-//    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/save")
     private UserDetailsDTO postUserData(@RequestBody UserDetailsDTO userDetails){
         return userDetailsRepo.save(userDetails);
     }
 
-//    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/getData/{userId}")
     private Optional<UserDetailsDTO> gerUserData(@PathVariable String userId){
         return userDetailsRepo.findById(userId);
