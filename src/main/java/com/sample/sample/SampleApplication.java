@@ -33,8 +33,9 @@ public class SampleApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOriginPatterns(patterns).exposedHeaders("*")
-						.allowedMethods("GET", "POST", "PUT", "DELETE", "POST", "OPTIONS");
+				registry.addMapping("/**").allowedOriginPatterns("https://abdur1r.github.io").exposedHeaders("*")
+						.allowedMethods("GET", "POST", "PUT", "DELETE", "POST", "OPTIONS")
+						.allowedHeaders("*");
 			}
 		};
 	}
