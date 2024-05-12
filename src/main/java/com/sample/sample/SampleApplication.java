@@ -33,7 +33,7 @@ public class SampleApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOriginPatterns("https://abdur1r.github.io").exposedHeaders("*")
+				registry.addMapping("/**").allowedOrigins("https://abdur1r.github.io")
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "POST", "OPTIONS")
 						.allowedHeaders("*");
 			}
