@@ -23,7 +23,7 @@ public class UserDetailsController {
 
     @CrossOrigin(origins = "https://abdur1r.github.io")
     @GetMapping("/getData/{userId}")
-    private Optional<UserDetailsDTO> gerUserData(@PathVariable String userId){
+    private Optional<UserDetailsDTO> getUserData(@PathVariable String userId){
         return userDetailsRepo.findById(userId);
     }
 }
