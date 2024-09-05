@@ -1,6 +1,6 @@
 package com.sample.sample;
 
-import jakarta.annotation.PostConstruct;
+//import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,7 +22,7 @@ public class SampleApplication {
 		SpringApplication.run(SampleApplication.class, args);
 	}
 
-	@PostConstruct
+//	@PostConstruct
 	public void init() {
 		// Setting Spring Boot SetTimeZone
 		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
