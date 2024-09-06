@@ -44,7 +44,7 @@ public class ToDoListController {
 
     @PutMapping("/update")
     public ResponseEntity<Void> UpdateObj(@RequestBody ToDoListModel obj){
-        toDoListRepo.insert(obj);
+        toDoListRepo.save(obj);
         return ResponseEntity.noContent().build();
     }
 }
