@@ -38,13 +38,12 @@ public class ToDoListController {
         // Logic to delete the object with the given ID
         // For example:
         toDoListRepo.deleteById(date);
-
         return toDoListRepo.findAll();
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Void> UpdateObj(@RequestBody ToDoListModel obj){
+    public List<ToDoListModel> UpdateObj(@RequestBody ToDoListModel obj){
         toDoListRepo.save(obj);
-        return ResponseEntity.noContent().build();
+        return toDoListRepo.findAll();
     }
 }
