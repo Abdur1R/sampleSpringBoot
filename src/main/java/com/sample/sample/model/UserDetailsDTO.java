@@ -1,6 +1,7 @@
 package com.sample.sample.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -9,7 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.net.URL;
 import java.util.Date;
 
-@Document
+@Builder
+@Document(collection = "userDetailsDTO")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
